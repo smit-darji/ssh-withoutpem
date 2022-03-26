@@ -32,6 +32,7 @@ Using arrows find "PasswordAuthentication yes", press "insert" key change "Passw
 press escape and save your changes and quit the editor
 
 cntl + x For Exit
+
 6. Restart SSH
 
 sudo /etc/init.d/sshd restart 
