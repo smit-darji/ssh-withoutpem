@@ -9,36 +9,39 @@
 
 3. Set a password
 
-sudo passwd new_user 
+        sudo passwd new_user 
 
 4. Add new _user to SUDOers
 
         sudo visudo // this will open editor 
-To edit this file, press 'insert' key
+--> To edit this file, press 'insert' key
 
-using arrows, you will see "root All=(ALL) ALL"
+--> using arrows, you will see "root All=(ALL) ALL"
 
-Hit an enter(to go to next line) and add the below line
+--> Hit an enter(to go to next line) and add the below line
         new_user	All=(ALL)	ALL 
-press escape and then write the below command
+--> press escape and then write the below command
 
 
 
 5. Change PasswordAuthentication "yes" to "no"
 
         sudo vi /etc/ssh/sshd_config 
-Using arrows find "PasswordAuthentication yes", press "insert" key change "PasswordAuthentication yes" to "PasswordAuthentication no"
+--> Using arrows find "PasswordAuthentication yes", press "insert" key change "PasswordAuthentication yes" to "PasswordAuthentication no"
 
-press escape and save your changes and quit the editor
+--> press escape and save your changes and quit the editor
 
-cntl + x For Exit
+        cntl + x 
+For Exit
 
 6. Restart SSH
 
         sudo /etc/init.d/sshd restart 
-That is it!
+--> That is it!
 
-Now you can ssh the new user without requiring pem file
+    
+--> Now you can ssh the new user without requiring pem file
 
         ssh new_user@ur_public_ip 
-enter password, and Voila!!!
+    
+--> enter password, and Enjoyyy!!!
